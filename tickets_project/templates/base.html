@@ -15,14 +15,14 @@
 
 <nav class="navbar navbar-expand-lg primary-color navbar-dark scrolling-navbar">
     <div class="container">
-        <a href="#" class="navbar-brand waves-effect"><strong class="white-text">TrustChain</strong></a>
+        <a href="{% url 'home' %}" class="navbar-brand waves-effect"><strong class="white-text">TrustChain</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigations">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active mainNav" style="margin-left: 20px;">
-                    <a href="#" class="nav-link waves-effect"><i class="fa fa-ticket" aria-hidden="true"></i>Все объявления</a>
+                    <a href="{% url 'tickets_list' %}" class="nav-link waves-effect"><i class="fa fa-ticket" aria-hidden="true"></i>Все объявления</a>
                 </li>
                 <li class="nav-item " style="margin-left: 20px;">
                     <a href="#" class="nav-link waves-effect">Кино</a>
