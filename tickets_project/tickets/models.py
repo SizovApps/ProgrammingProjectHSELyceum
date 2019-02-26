@@ -7,6 +7,7 @@ from django.urls import reverse
 
 class Ticket(models.Model):
     title = models.CharField(max_length=70)
+    phoneNumber = models.CharField(max_length=15)
     description = models.CharField(max_length=200, blank=True)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)

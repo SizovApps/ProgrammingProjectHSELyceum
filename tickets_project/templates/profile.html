@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <h2 class="display-4">Hello, {{ object.username }}!</h2>
+  <p class="lead">На этой странице ты сможешь создавать новые объявления о продаже билетов.</p>
+  <hr class="my-4">
+  <p>Нажмите на кнопку, что бы создать новое объявление.</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'ticket_new' %}" role="button">Создать объявление</a>
+</div>
+{% endblock %}

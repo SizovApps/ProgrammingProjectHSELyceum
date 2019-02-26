@@ -38,7 +38,7 @@
                        aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ user.username }}</a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                         {% if user.is_authenticated %}
-                        <a class="dropdown-item" href="#">Посмотреть в профиль</a>
+                        <a class="dropdown-item" href="{% url 'profile' user.pk %}">Посмотреть профиль</a>
                             <a href="{% url 'logout' %}">Выйти</a>
 
                         {% endif %}
