@@ -37,12 +37,12 @@
 
       <h4 class="h4 mb-4">{{ t.title }}</h4>
 
-      <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam
-        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-      <p class="font-weight-normal">by <a><strong>Carine Fox</strong></a>, 19/08/2016</p>
+      <p class="font-weight-normal">{{ t.description }}</p>
+      <p class="font-weight-normal">by <a><strong>{{ t.author }}</strong></a>, 19/08/2016</p>
+        <p><button class="btn btn-deep-purple">{{ t.price }} $</button> <a class="btn btn-success" href="{% url 'ticket_detail' t.pk %}">Посмотреть</a></p>
 
-      <a class="btn btn-success">Read more</a>
+
+
 
     </div>
     <!-- Grid column -->
@@ -54,5 +54,9 @@
     {% endfor %}
 
 <!-- Card deck -->
+
+{% endblock %}
+
+{% block footer %}
 
 {% endblock %}

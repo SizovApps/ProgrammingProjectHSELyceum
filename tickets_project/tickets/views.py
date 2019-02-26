@@ -21,7 +21,7 @@ class TicketDetailView(DeleteView):
 class TicketUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Ticket
     template_name = 'ticket_edit.html'
-    fields = ('title', 'body', 'price', 'image')
+    fields = ('title', 'description', 'body', 'price')
     login_url = 'login'
 
     def test_func(self):
@@ -43,7 +43,7 @@ class TicketDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class TicketCreateView(LoginRequiredMixin, CreateView):
     model = Ticket
     template_name = 'ticket_new.html'
-    fields = ('title', 'body', 'price', 'image')
+    fields = ('title', 'description', 'body', 'price')
     login_url = 'login'
 
     def form_valid(self, form):
